@@ -132,7 +132,7 @@ export default {
       })
       .catch((error) => {
         console.log("error:", error);
-        this.$swal({
+        Swal.fire({
           icon: " error",
           title: "เกิดข้อผิดพลาด",
           text: error.response?.data?.message,
