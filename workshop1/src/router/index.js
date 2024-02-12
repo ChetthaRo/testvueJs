@@ -25,6 +25,30 @@ const routes = [
     name: "register",
     component: () => import("../views/Register.vue"),
   },
+  {
+    path: "",
+    name: "Toolbar",
+    component: () =>
+      import("../views/Toolbar.vue"),
+    children: [
+      {
+        path: "/products",
+        name: "products",
+        component: () => import("../views/Products.vue"),
+      },
+      {
+        path: "/editproduct",
+        name: "editproduct",
+        component: () => import("../views/product/_productId.vue"),
+      },
+      {
+        path: "/productdetal",
+        name: "productdetal",
+        component: () => import("../views/ProductDetail.vue"),
+      },
+
+    ],
+  },
 ];
 
 const router = new VueRouter({
